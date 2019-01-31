@@ -45,7 +45,7 @@ def Rozklad_na_tyzdenCommand(bot,update) :
                           '/third_Philological')
 def first_PhilologicalCommand(bot,update) :
     bot.send_message(chat_id=update.message.chat_id,
-                     text= "Понеділок\n"
+                    text=" Понеділок\n"
                          " 1 – Географія. 10   каб;\n"
                          " 2 - Географія 10 каб;\n"
                          " 3 – Осн.здор. 17 каб ;\n"                                                                            
@@ -53,7 +53,7 @@ def first_PhilologicalCommand(bot,update) :
                          " 5 - Укр.літ 43 каб ;\n"                                                                           
                          " 6 – Укр.літ 43 каб;\n"
                          " 7 - Фізика 5  каб; \n"
-                         "Вівторок\n"                                                                                                                                                        
+                         " Вівторок\n"                                                                                                                                                        
                          " 1 – Укр.мова. 49   каб;\n"                                                                            
                          " 2 - Укр.мова 49 каб;\n"                                                                            
                          " 3 – Труд.навч. 45 каб ;\n"                                                                            
@@ -62,7 +62,7 @@ def first_PhilologicalCommand(bot,update) :
                          " 6 – Мистецтво 54 каб;\n"                                                                            
                          " 7 - Фіз.культура Спорт. зал;\n"                                                                            
                          " 8 - Фіз.культура Спорт. зал\n"                                                                           
-                         "Середа\n"                                                                            
+                         " Середа\n"                                                                            
                          " 1 – Правознавство 45   каб;\n"                                                                            
                          " 2 - Інформатика 51/52 каб;\n"                                                                            
                          " 3 – Інформатика 51/52 каб ;\n"                                                                            
@@ -70,7 +70,7 @@ def first_PhilologicalCommand(bot,update) :
                          " 5 - Фіз.культура/Фітнес;\n"                                                                            
                          " 6 – Зар.літ 44 каб;\n"                                                                            
                          " 7 - Укр.літ 48  каб; \n"                                                                            
-                         "Четверг\n"                                                                            
+                         " Четверг\n"                                                                            
                          " 1 – Історія 45   каб;\n"                                                                            
                          " 2 - Історія 45 каб;\n"                                                                            
                          " 3 – Укр.мова 49 каб ;\n"                                                                            
