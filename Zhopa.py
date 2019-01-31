@@ -8,9 +8,16 @@ dispatcher = updater.dispatcher
 # Обработка команд
 def startCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
-                     text='Тобі потрібен розклад ? тоді напиши /help\n'
-                          'А якщо тобі потрібен розклад на весь тиждень\n'
-                          'то напиши /schedule')
+                     text='Привіт це бот для зручного перегляду\n'
+                          ' розкладу ліцейних класів\n'
+                          '(8 філ; 8 пм; 1 філ; 1 пр;\n'
+                          ' 1 мат; 2 філ; 2 мат; 3 філ; 3пм)'
+                          'на пн, вт, ср, чт, пт\n'
+                          'Щоб скористатися моєю допомогою введи запит \n'
+                          'за зразком : 2 мат пн\n'
+                          'Доступні команди :\n'
+                          '/Rozklad_na_tyzden\n'
+                          '/help')
 def helpCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
                      text ='В наявності є класи :\n'
@@ -18,25 +25,25 @@ def helpCommand(bot, update):
                            '1 пр ; 8 філ ;\n'
                            ' 8 пм 3 філ ;\n'
                            ' 3 пм ; 2 філ ; 2 мат,\n'
-                           ' і ввести день наприклад :\n'
+                           ' і потрібно ввести день наприклад :\n'
                            ' пн - понеділок ,\n'
                            ' вт - вівторок ,\n'
                            ' ср - середа ,\n'
                            ' чт - четверг,\n'
                            ' пт - п`ятниця)')
-def scheduleCommand(bot,update) :
+def Rozklad_na_tyzdenCommand(bot,update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text='Вибери свій клас\n'
-                          '/eightNM\n'
-                          '/eightPhilological\n'
-                          '/firstMathematical\n'
-                          '/firstPhilological\n'
-                          '/firstNaturalistic\n'
-                          '/secondMathematical\n'
-                          '/secondPhilological\n'
-                          '/thirdPM\n'
-                          '/thirdPhilological')
-def firstPhilologicalCommand(bot,update) :
+                          '/eight_NM\n'
+                          '/eight_Philological\n'
+                          '/first_Mathematical\n'
+                          '/first_Philological\n'
+                          '/first_Naturalistic\n'
+                          '/second_Mathematical\n'
+                          '/second_Philological\n'
+                          '/third_NM\n'
+                          '/third_Philological')
+def first_PhilologicalCommand(bot,update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text= "Понеділок\n"
                          " 1 – Географія. 10   каб;\n"
@@ -79,7 +86,7 @@ def firstPhilologicalCommand(bot,update) :
                          " 5 - Анг.мова 35 каб ;\n"                                                                            
                          " 6 – Зар.літ 44 каб;\n"                                                                            
                          " 7 - Біологія 50  каб; \n")
-def firstNaturalisticCommand(bot, update) :
+def first_NaturalisticCommand(bot, update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text=" Понеділок\n"
                                                                                                                          " 1 – Осн.здор. 15   каб;\n"
@@ -122,7 +129,7 @@ def firstNaturalisticCommand(bot, update) :
                                                                                                                          " 4 – Інформатика 45 каб ;\n"
                                                                                                                          " 5 - Математика 54 каб ;\n"
                                                                                                                          " 6 – Математика 54 каб;\n")
-def firstMathematicalCommand(bot, update) :
+def first_MathematicalCommand(bot, update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text=" Понеділок\n"
                                                                                                                                              " 1 – Хімія 31   каб;\n"
@@ -166,7 +173,7 @@ def firstMathematicalCommand(bot, update) :
                                                                                                                                              " 5 - Математика 54 каб ;\n"
                                                                                                                                              " 6 – Математика 54 каб;\n"
                                                                                                                                              " 7 - Правознавство 45 каб")
-def eightNMCommand(bot,update) :
+def eight_NMCommand(bot,update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text=                                                                                                                                       " Понеділок\n"
                                                                                                                                                                  " 1 – Укр.мова 49   каб;\n"
@@ -208,7 +215,7 @@ def eightNMCommand(bot,update) :
                                                                                                                                                                  " 5 - Укр.літ 43 каб ;\n"
                                                                                                                                                                  " 6 – Укр.літ 43 каб;\n"
                                                                                                                                                                  " 7 - Труд.навч 15 каб/n")
-def eightPhilologicalCommand(bot,update):
+def eight_PhilologicalCommand(bot,update):
     bot.send_message(chat_id=update.message.chat_id,
                      text=                                                                                                                                                               " Понеділок\n"
                                                                                                                                                                                          " 1 – Анг.мова 34/50   каб;\n"
@@ -274,7 +281,7 @@ def eightPhilologicalCommand(bot,update):
 
 
 
-def secondMathematicalCommand(bot, update):
+def second_MathematicalCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
                      text="Понеділок :\n"
                      "1 - Фізика 54 каб ;\n" 
@@ -318,7 +325,7 @@ def secondMathematicalCommand(bot, update):
                      " 5 - Громадянска освіта 45 каб ;\n"
                      " 6 - Інформатика 51 каб ;\n"
                      " 7 - Громадянська освіта 45 каб ")
-def secondPhilologicalCommand(bot, update) :
+def second_PhilologicalCommand(bot, update) :
     bot.send_message(chat_id=update.message.chat_id,
                      text="Понеділок :\n"
                           " 1 – Громадянська освіта 45 каб;\n"
@@ -362,7 +369,7 @@ def secondPhilologicalCommand(bot, update) :
                           " 3 – Англійська мова 42 каб;\n"
                           " 7 - Фізика 54  каб; ")
 
-def thirdNMCommand(bot,update) :
+def third_NMCommand(bot,update) :
         bot.send_message(chat_id=update.message.chat_id,
                      text="Понеділок :\n"
                           " 1 – Біологія/Матем. 32/5   каб;\n"
@@ -404,7 +411,7 @@ def thirdNMCommand(bot,update) :
                           " 4 – Історія 45 каб ;\n"
                           " 5 - Астрономія 52 каб ;\n"
                           " 6 – Економіка 10 каб;")
-def thirdPhilologicalCommand(bot,update):
+def third_PhilologicalCommand(bot,update):
         bot.send_message(chat_id=update.message.chat_id,
                      text="Понеділок :\n"
                           " 1 – Математика 11   каб;\n"
@@ -1007,31 +1014,31 @@ def textMessage(bot, update):
 # Хендлеры
 start_command_handler = CommandHandler('start', startCommand)
 help_command_handler = CommandHandler('help', helpCommand)
-secondMathematical_command_handler = CommandHandler('secondMathematical', secondMathematicalCommand)
-secondPhilological_command_handler = CommandHandler('secondPhilological', secondPhilologicalCommand)
-schedule_command_handler = CommandHandler('schedule', scheduleCommand)
-thirdNM_command_handler = CommandHandler('thirdPM', thirdNMCommand)
-thirdPhilological_command_handler = CommandHandler('thirdPhilological', thirdPhilologicalCommand)
+second_Mathematical_command_handler = CommandHandler('second_Mathematical', second_MathematicalCommand)
+second_Philological_command_handler = CommandHandler('second_Philological', second_PhilologicalCommand)
+Rozklad_na_tyzden_command_handler = CommandHandler('Rozklad_na_tyzden', Rozklad_na_tyzdenCommand)
+third_NM_command_handler = CommandHandler('third_NM', third_NMCommand)
+third_Philological_command_handler = CommandHandler('third_Philological', third_PhilologicalCommand)
 text_message_handler = MessageHandler(Filters.text, textMessage)
-firstPhilological_command_handler = CommandHandler('firstPhilological',firstPhilologicalCommand)
-firstNaturalistic_command_handler = CommandHandler('firstNaturalistic',firstNaturalisticCommand)
-firstMathematical_command_handler = CommandHandler('firstMathematical',firstMathematicalCommand)
-eightPhilological_command_handler = CommandHandler('eightPhilological',eightPhilologicalCommand)
-eightNM_command_handler= CommandHandler('eightNM', eightNMCommand)
+first_Philological_command_handler = CommandHandler('first_Philological',first_PhilologicalCommand)
+first_Naturalistic_command_handler = CommandHandler('first_Naturalistic',first_NaturalisticCommand)
+first_Mathematical_command_handler = CommandHandler('first_Mathematical',first_MathematicalCommand)
+eight_Philological_command_handler = CommandHandler('eight_Philological',eight_PhilologicalCommand)
+eight_NM_command_handler= CommandHandler('eight_NM', eight_NMCommand)
 # Добавляем хендлеры в диспетчер
 dispatcher.add_handler(start_command_handler)
 dispatcher.add_handler(help_command_handler)
 dispatcher.add_handler(text_message_handler)
-dispatcher.add_handler(secondMathematical_command_handler)
-dispatcher.add_handler(secondPhilological_command_handler)
-dispatcher.add_handler(thirdNM_command_handler)
-dispatcher.add_handler(schedule_command_handler)
-dispatcher.add_handler(thirdPhilological_command_handler)
-dispatcher.add_handler(firstPhilological_command_handler)
-dispatcher.add_handler(firstNaturalistic_command_handler)
-dispatcher.add_handler(firstMathematical_command_handler)
-dispatcher.add_handler(eightPhilological_command_handler)
-dispatcher.add_handler(eightNM_command_handler)
+dispatcher.add_handler(second_Mathematical_command_handler)
+dispatcher.add_handler(second_Philological_command_handler)
+dispatcher.add_handler(third_NM_command_handler)
+dispatcher.add_handler(Rozklad_na_tyzden_command_handler)
+dispatcher.add_handler(third_Philological_command_handler)
+dispatcher.add_handler(first_Philological_command_handler)
+dispatcher.add_handler(first_Naturalistic_command_handler)
+dispatcher.add_handler(first_Mathematical_command_handler)
+dispatcher.add_handler(eight_Philological_command_handler)
+dispatcher.add_handler(eight_NM_command_handler)
 # Начинаем поиск обновлений
 updater.start_polling(clean=True)
 # Останавливаем бота, если были нажаты Ctrl + C
