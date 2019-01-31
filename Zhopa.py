@@ -28,7 +28,9 @@ def helpCommand(bot, update):
                            ' ср - середа ,\n'
                            ' чт - четверг,\n'
                            ' пт - п`ятниця)\n'
-                           'У вас має вийти щось типу (3 філ пн)\n'
+                           ' Приклад правильно введеної\n'
+                           ' команди: 3 філ пн\n'
+                           ''
                            'Розклад одразу на весь тиждень :\n'
                            '/Rozklad_na_tyzden')
 def Rozklad_na_tyzdenCommand(bot,update) :
