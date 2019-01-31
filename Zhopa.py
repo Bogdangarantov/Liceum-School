@@ -8,12 +8,12 @@ dispatcher = updater.dispatcher
 # Обработка команд
 def startCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
-                     text='Привіт це бот для зручного перегляду\n'
+                     text='Привіт, це бот для зручного перегляду\n'
                           ' розкладу ліцейних класів\n'
                           '(8 філ; 8 пм; 1 філ; 1 пр;\n'
                           ' 1 мат; 2 філ; 2 мат; 3 філ; 3пм)\n'
                           'на пн, вт, ср, чт, пт\n'
-                          'Щоб скористатися моєю допомогою введи запит /help \n')
+                          'Щоб скористатися моєю допомогою, введи запит /help \n')
 
 
 def helpCommand(bot, update):
