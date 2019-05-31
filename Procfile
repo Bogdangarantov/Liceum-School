@@ -1,2 +1,2 @@
-worker: python Zhopa.py
+worker: python DOOOCcC.py
 ps:scale worker=1
